@@ -1,0 +1,15 @@
+# KiCad
+/hardware/*-backups/
+/hardware/*.kicad_prl
+/hardware/fp-info-cache
+/hardware/\#auto_saved_files\#
+
+# Interactive HTML BOM
+/hardware/bom/
+
+# Fabrication Toolkit
+/hardware/production/
+/hardware/fabrication-toolkit-options.json
+
+# Replicate Layout
+/hardware/replicate_layout.log
