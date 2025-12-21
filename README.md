@@ -9,7 +9,7 @@
 <br>
 
 <h1 align="center">
-  <img src="media/hero.png" width="192" height="auto"/>
+  <img src="media/hero.png" width="300" height="auto"/>
   <br><br>
   Katia Keyboard
   <br><br>
@@ -25,7 +25,7 @@ Katia is a split mechanical keyboard with 6 by 3 column staggered keys and 3 thu
 
 Compared to the original Crkbrd, Katia features 4-layer PCB stackup, which allows for better routing and thus, better signal integrity.
 
-The design is intended to be used with hot-swap sockets for Cherry MX switches. The switches are backlit with individually addressable WS2812B LEDs.
+The design is intended to be used with hot-swap sockets for Cherry MX switches. The switches are backlit with individually addressable LEDs.
 
 All the mechanical components are kept in the same position as in the original project. This allows for easy replacement of the PCB in existing Crkbrd cases, or to use the existing Crkbrd cases and plates with the new PCB.
 
@@ -36,9 +36,13 @@ All the mechanical components are kept in the same position as in the original p
 
 The PCB stackup consists of four layers.
 
-| Top View                          | Bottom View                       |
-|-----------------------------------|-----------------------------------|
-| ![PCB Top](media/pcb_top.jpg)     | ![PCB Back](media/pcb_bottom.jpg) |
+| PCB Top                           | PCB Bottom                          |
+|-----------------------------------|-------------------------------------|
+| ![PCB Top](media/pcb_top.png)     | ![PCB Bottom](media/pcb_bottom.png) |
+
+## Firmware
+
+The keyboard firmware is based on [QMK Firmware](https://qmk.fm/).
 
 ## License
 
