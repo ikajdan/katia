@@ -4287,6 +4287,15 @@
 				(hide yes)
 			)
 		)
+		(property "JLCPCB Part #" "C23179"
+			(at 93.98 72.39 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "65237f93-1ab1-41ba-87a6-ba37c6ab57a5")
 		)
@@ -4448,6 +4457,15 @@
 				(font
 					(size 1.27 1.27)
 				)
+			)
+		)
+		(property "JLCPCB Part #" "C15849"
+			(at 73.66 106.68 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
 			)
 		)
 		(pin "1"
@@ -4728,6 +4746,15 @@
 				(font
 					(size 1.27 1.27)
 				)
+			)
+		)
+		(property "JLCPCB Part #" "C14663"
+			(at 83.82 106.68 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
 			)
 		)
 		(pin "1"
