@@ -58,24 +58,7 @@
           "width": 0.0
         }
       ],
-      "drc_exclusions": [
-        [
-          "unconnected_items|145231000|156331000|F.Cu|4|ce49199e-d4c2-4abf-9c39-530a210a82d2|2f48851f-3a85-46b7-bd77-5a51c1bc6da9",
-          ""
-        ],
-        [
-          "unconnected_items|201398004|124076702|F.Cu|4|d564ffcb-2e48-48ae-a576-37c9dccc51bf|95822737-bfd3-4515-a0fd-92a9bf4ff3bf",
-          ""
-        ],
-        [
-          "unconnected_items|215363004|129356904|F.Cu|4|b691ac5d-2197-4c7d-9ceb-3cae40c7bc18|d666a156-d63f-4ae0-9834-5ce8d767e78a",
-          ""
-        ],
-        [
-          "unconnected_items|225700000|146975000|F.Cu|4|4b57f15b-aa3a-42cb-ad7b-7d0255ba9111|a3ac3993-e6f0-4607-a666-923fc93db499",
-          ""
-        ]
-      ],
+      "drc_exclusions": [],
       "meta": {
         "version": 2
       },
@@ -587,7 +570,7 @@
       },
       {
         "bus_width": 12,
-        "clearance": 0.15,
+        "clearance": 1.0,
         "diff_pair_gap": 0.09,
         "diff_pair_width": 0.4,
         "line_style": 0,

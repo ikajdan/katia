@@ -3,7 +3,6 @@
 	(generator "pcbnew")
 	(generator_version "9.0")
 	(layer "F.Cu")
-	(tags "usb usb-c 2.0 pd")
 	(property "Reference" "REF**"
 		(at 0 14.65 0)
 		(layer "F.SilkS")

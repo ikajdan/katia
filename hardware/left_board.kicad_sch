@@ -5,7 +5,7 @@
 	(uuid "5d636ecb-124e-4eb3-8682-4273aa9c70aa")
 	(paper "A4")
 	(title_block
-		(title "Katia Split Keyboard")
+		(title "Katia Keyboard")
 		(date "2025-12-20")
 		(rev "${REVISION}")
 		(company "Author: I. Kajdan")
