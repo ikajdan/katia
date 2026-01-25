@@ -31,18 +31,174 @@ All the mechanical components are kept in the same position as in the original p
 
 ## Hardware
 
+The PCB stackup consists of four layers:
+
+- Top layer: Signal
+- Second layer: Ground plane
+- Third layer: Power and Signal
+- Bottom layer: Signal
+
+ The top layer is used for differential pair routing for USB data lines, as well as for some of the components. The second layer is a dedicated ground plane. The third one is used for power distribution and some signal routing. The bottom layer is used for routing the remaining signals.
+
+ | Left Side                              | Right Side                               |
+|----------------------------------------|------------------------------------------|
+| ![Layout Left](media/layout_left.png)  | ![Layout Right](media/layout_right.png)  |
+
+### Design improvements
+
+The following issues were found in the original Crkbrd PCB design, which have been addressed in this redesign.
+
+#### USB differential pair routing
+
+- Routed USB D+/D− as a differential pair and tuned trace width and spacing to meet USB specifications:
+  - Differential impedance: 90 Ω ±15%.
+  - Single-ended impedance: 45 Ω ±15% per line.
+- Maintained an uninterrupted reference ground plane beneath the pair.
+- Applied controlled ground-plane clearance adjacent to the pair to fine-tune impedance and reduce discontinuities.
+
+#### Grounding and EMI control
+
+- Added a dedicated ground plane layer.
+- Preserved continuous ground planes wherever possible to ensure low-impedance return paths.
+- Added stitching vias between ground planes to minimize loop area and support high-frequency return currents.
+- Added ground pours adjacent to signal routes to reduce crosstalk and radiated EMI.
+- Reduced ground-plane clearance to improve EMI performance, while still staying within JLCPCB manufacturing capabilities.
+- Rerouted signals to avoid long, parallel trace runs.
+- Moved decoupling capacitors closer to IC power pins.
+- Added ferrite beads on power rails for high-frequency noise suppression.
+- Increased local decoupling on power rails, including near flash and LED ICs.
+- Pulled MCU RUN pin up to IOVDD.
+
+#### ESD and short-circuit protection
+
+- Added PTC resettable fuses on 5 V supply rails.
+- Added TVS diodes on TRS interconnect lines.
+- Inserted series resistors on TRS signal lines.
+- Added a series resistor on the LED signal line to limit transient currents.
+
+#### Miscellaneous design improvements
+
+- Replaced the LED drive solution with a dedicated level shifter. This at a slightly higher BOM cost, improved LED brightness and eliminated power loss from the drop-down diode.
+
+#### Manufacturability and testability
+
+- Updated design rules to support JLCPCB 4-layer fabrication.
+- Added teardrops to all traces to improve tolerance to manufacturing defects.
+- Avoided via-in-pad routing to reduce assembly complexity.
+- Added test points for critical signals to support in-circuit testing and debugging.
+- Added a dedicated Tag-Connect footprint for programming.
+- Added manufacturer part numbers for LCSC components to streamline BOM generation and ordering.
+
+### Ordering and Assembly
+
+The PCB production files are available in the [release assets](https://github.com/ikajdan/katia/releases/latest). The design rules have been set to match JLCPCB's 4-layer PCB manufacturing capabilities.
+
+### PCB
+
+A complete bill of materials (BOM) and pick-and-place files are provided for easy ordering and assembly.
+
+When ordering the PCB assembly from [JLCPCB](https://jlcpcb.com/), make sure to select the following options:
+
+- Base Material: FR-4
+- Layers: 4
+- Product Type: Industrial/Consumer electronics
+- **Different Design: 2**
+- **Delivery Format: Panel by Customer**
+- PCB Thickness: 1.6mm
+- Specify Stackup: No requirement
+- Impedance Control: No requirement
+- Material Type: TG135
+- Via Covering: Plugged
+- Outer Copper Weight: 1 oz
+- Inner Copper Weight: 0.5 oz
+- Blind Slot: No
+- Min via hole size/diameter: 0.3mm/(0.4/0.45mm)
+
+All other options can be left at default values. Choose the solder mask and silkscreen colors as desired.
+
+The total cost of the PCB manufacturing should be around $60 for 5 panels.
+
+![PCB Top](media/pcb_top.png)
+![PCB Bottom](media/pcb_bottom.png)
+
+### Solder Paste Stencil
+
+When ordering the solder paste stencil from JLCPCB, make sure to select the bottom layer, as the keyboard is assembled from the bottom side:
+
+- Thickness: Select by JLCPCB
+- **Stencil Side: Bottom**
+- Nano-Coating No
+- Ultrasonic-resistant adhesive: No
+
+The cost of the stencil should be around $10.
+
+### Components
+
+The bill of materials includes manufacturer part numbers for easy ordering from [LCSC](https://lcsc.com/).
+
+> [!NOTE]
+> Hot-swap sockets and mechanical switches are not included in the BOM. They can be ordered separately from various suppliers.
+
+The total cost of the components for sourcing all parts for both halves of five keyboards should be around $60.
+
+When ordering the components just for one keyboard, make sure to adjust the quantities accordingly and order some spare parts for potential assembly errors (especially for LEDs, buttons, and connectors).
+
+### Assembly
+
+While the keyboard can be assembled by hand, it is recommended to use a professional PCB assembly service, such as [JLCPCB](https://jlcpcb.com/), to ensure high-quality solder joints and proper component placement.
+
+If assembling by hand, first apply solder paste to the PCB using the provided stencil. Then, place all surface-mount components using tweezers or a pick-and-place tool. Finally, reflow solder the components using a hot air rework station or a reflow oven. Ommit the hot-swap sockets, jack connectors, and LEDs during the reflow process, as they are not designed to withstand high temperatures. After reflowing the other components, check the solder joints and fix any issues using a soldering iron.
+
+Plug in the USB cable into each half of the keyboard, and check if it is recognized by the computer. If everything is working correctly, you can then solder the LEDs, jack connectorsm and hot-swap sockets using a standard soldering iron. Finally, insert the mechanical switches into the hot-swap sockets and connect the two halves of the keyboard using a TRS cable.
+
 > [!WARNING]
 > Do not plug in or unplug the interconnect jack between the two keyboard halves while the keyboard is powered. Hot-plugging can cause electrical damage to the PCB and components. Always disconnect power before handling the communication cable.
 
-The PCB stackup consists of four layers.
-
-| PCB Top                           | PCB Bottom                          |
-|-----------------------------------|-------------------------------------|
-| ![PCB Top](media/pcb_top.png)     | ![PCB Bottom](media/pcb_bottom.png) |
-
 ## Firmware
 
-The keyboard firmware is based on [QMK Firmware](https://qmk.fm/).
+The keyboard firmware is based on [QMK Firmware](https://qmk.fm/). The existing Crkbd firmware can be used, but it has a different key mapping, so the keymap must be adjusted accordingly.
+
+```diff
+diff --git a/keyboards/crkbd/rev4_1/info.json b/keyboards/crkbd/rev4_1/info.json
+index 3732d63910..5caee70508 100755
+--- a/keyboards/crkbd/rev4_1/info.json
++++ b/keyboards/crkbd/rev4_1/info.json
+@@ -25,10 +25,10 @@
+     },
+     "matrix_pins": {
+         "direct":[
+-            ["GP22", "GP20", "GP23", "GP26", "GP29",  "GP0",  "GP4"],
+-            ["GP19", "GP18", "GP24", "GP27",  "GP1",  "GP2",  "GP8"],
+-            ["GP17", "GP16", "GP25", "GP28",  "GP3",  "GP9",   null],
+-            [  null,   null,   null, "GP14", "GP15", "GP11",   null]
++            ["GP19", "GP22", "GP23", "GP29", "GP27", "GP24", "GP3"],
++            ["GP17", "GP18", "GP20",  "GP4", "GP26",  "GP0", "GP2"],
++            ["GP14", "GP15", "GP16", "GP25", "GP28",  "GP1",  null],
++            [  null,   null,   null,  "GP9",  "GP8", "GP11",  null]
+         ]
+     },
+     "encoder": {
+@@ -52,10 +52,10 @@
+         "matrix_pins": {
+             "right": {
+                 "direct": [
+-                    [ "GP8",  "GP9",  "GP3",  "GP2",  "GP1", "GP27", "GP25"],
+-                    ["GP11", "GP14",  "GP4",  "GP0", "GP28", "GP26", "GP23"],
+-                    ["GP15", "GP18",  "GP5", "GP29", "GP20", "GP22",   null],
+-                    [  null,   null,   null, "GP16", "GP17", "GP19",   null]
++                    ["GP18", "GP14",  "GP9",  "GP4",  "GP1",  "GP3", "GP2"],
++                    ["GP22", "GP20", "GP11",  "GP8",  "GP5",  "GP0", "GP27"],
++                    ["GP23", "GP19", "GP16", "GP15", "GP29", "GP25",  null],
++                    [  null,   null,   null, "GP28", "GP26", "GP24",  null]
+                 ]
+             }
+         },
+```
+
+To flash the keyboard firmware, follow build instructions available at [QMK Firmware Getting Started](https://docs.qmk.fm/newbs_getting_started).
+
+> [!NOTE]
+> When pluged in via USB cable, each half of the keyboard will appear as a separate device. Make sure to flash the firmware to both halves.
 
 ## License
 
