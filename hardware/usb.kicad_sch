@@ -3557,7 +3557,7 @@
 				)
 			)
 		)
-		(property "Value" "VS-10BQ015HM3/5BT"
+		(property "Value" "CDBM240L-HF"
 			(at 170.18 87.63 0)
 			(effects
 				(font
@@ -3574,7 +3574,7 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" "https://lcsc.com/datasheet/lcsc_datasheet_2410010303_onsemi-MBR0520LT1G_C23848.pdf"
+		(property "Datasheet" "https://www.lcsc.com/datasheet/C3012684.pdf"
 			(at 170.18 91.44 90)
 			(effects
 				(font
@@ -3592,7 +3592,7 @@
 				(hide yes)
 			)
 		)
-		(property "JLCPCB Part #" "C23848"
+		(property "JLCPCB Part #" "C3012684"
 			(at 170.18 91.44 0)
 			(effects
 				(font
