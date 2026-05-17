@@ -11,6 +11,113 @@
 		(company "Author: I. Kajdan")
 	)
 	(lib_symbols
+		(symbol "Connector:TestPoint_Small"
+			(pin_numbers
+				(hide yes)
+			)
+			(pin_names
+				(offset 0.762)
+				(hide yes)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "TP"
+				(at 0 3.81 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "TestPoint_Small"
+				(at 0 2.032 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" ""
+				(at 5.08 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" "~"
+				(at 5.08 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" "test point"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_keywords" "test point tp"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_fp_filters" "Pin* Test*"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(symbol "TestPoint_Small_0_1"
+				(circle
+					(center 0 0)
+					(radius 0.508)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "TestPoint_Small_1_1"
+				(pin passive line
+					(at 0 0 90)
+					(length 0)
+					(name "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
 		(symbol "Device:C_Small"
 			(pin_numbers
 				(hide yes)
@@ -1114,6 +1221,12 @@
 		(uuid "e09a9fec-0733-4024-befb-794eababc27b")
 	)
 	(junction
+		(at 100.3633 72.39)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "e2229986-8dd5-4ef9-bce7-1f1412b8f22c")
+	)
+	(junction
 		(at 200.66 97.79)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -1125,10 +1238,6 @@
 		(color 0 0 0 0)
 		(uuid "f66fe074-05c6-49a4-bd0b-4a2c5b0640f9")
 	)
-	(no_connect
-		(at 209.55 105.41)
-		(uuid "a5057942-2924-422b-897d-1b006b1d18a9")
-	)
 	(wire
 		(pts
 			(xy 78.74 102.87) (xy 83.82 102.87)
@@ -1138,6 +1247,16 @@
 			(type default)
 		)
 		(uuid "011cf3d0-a133-40c4-b2fa-99775f4fb98f")
+	)
+	(wire
+		(pts
+			(xy 96.52 72.39) (xy 100.3633 72.39)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "04a9bdb9-a09d-423a-9cce-b0668e258fb0")
 	)
 	(wire
 		(pts
@@ -1441,7 +1560,7 @@
 	)
 	(wire
 		(pts
-			(xy 102.87 72.39) (xy 96.52 72.39)
+			(xy 102.87 72.39) (xy 100.3633 72.39)
 		)
 		(stroke
 			(width 0)
@@ -2749,6 +2868,75 @@
 				)
 				(path "/4cc5d416-57f5-4147-8183-e03ae6b1198a/50d96a5e-3d25-4129-9495-15388c76587f/71fa2931-3753-408f-9328-62d662f82c2b"
 					(reference "LED41")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Connector:TestPoint_Small")
+		(at 100.3633 72.39 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom no)
+		(on_board yes)
+		(dnp no)
+		(uuid "2636ba26-d3fd-401a-89b8-a0e1266b015d")
+		(property "Reference" "TP7"
+			(at 100.3633 70.485 0)
+			(effects
+				(font
+					(size 1 1)
+				)
+			)
+		)
+		(property "Value" "TX"
+			(at 101.6333 74.295 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "Footprint" "TestPoint:TestPoint_Pad_D1.0mm"
+			(at 105.4433 72.39 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 105.4433 72.39 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 100.3633 72.39 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "0b61ef52-febd-465f-9620-33176dd1d16d")
+		)
+		(instances
+			(project "katia"
+				(path "/4cc5d416-57f5-4147-8183-e03ae6b1198a/089db7cd-2934-428b-a62a-55e0735649ba/364701ca-c0a6-43f9-8444-ed2021756e6c"
+					(reference "TP7")
+					(unit 1)
+				)
+				(path "/4cc5d416-57f5-4147-8183-e03ae6b1198a/50d96a5e-3d25-4129-9495-15388c76587f/71fa2931-3753-408f-9328-62d662f82c2b"
+					(reference "TP12")
 					(unit 1)
 				)
 			)
@@ -4689,6 +4877,75 @@
 				)
 				(path "/4cc5d416-57f5-4147-8183-e03ae6b1198a/50d96a5e-3d25-4129-9495-15388c76587f/71fa2931-3753-408f-9328-62d662f82c2b"
 					(reference "#PWR0129")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Connector:TestPoint_Small")
+		(at 209.55 105.41 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom no)
+		(on_board yes)
+		(dnp no)
+		(uuid "bd8cda47-8123-4f60-9d18-13299ddabf3c")
+		(property "Reference" "TP8"
+			(at 209.55 107.315 0)
+			(effects
+				(font
+					(size 1 1)
+				)
+			)
+		)
+		(property "Value" "TX"
+			(at 210.82 107.315 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "Footprint" "TestPoint:TestPoint_Pad_D1.0mm"
+			(at 214.63 105.41 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 214.63 105.41 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 209.55 105.41 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "a9314f33-e0de-40e5-b8cc-ffb47ab0096a")
+		)
+		(instances
+			(project "katia"
+				(path "/4cc5d416-57f5-4147-8183-e03ae6b1198a/089db7cd-2934-428b-a62a-55e0735649ba/364701ca-c0a6-43f9-8444-ed2021756e6c"
+					(reference "TP8")
+					(unit 1)
+				)
+				(path "/4cc5d416-57f5-4147-8183-e03ae6b1198a/50d96a5e-3d25-4129-9495-15388c76587f/71fa2931-3753-408f-9328-62d662f82c2b"
+					(reference "TP13")
 					(unit 1)
 				)
 			)

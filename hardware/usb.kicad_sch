@@ -4171,7 +4171,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "5b5b52c5-c8a3-4ef2-8af4-6832139d772e")
-		(property "Reference" "TP9"
+		(property "Reference" "TP11"
 			(at 233.68 90.17 0)
 			(effects
 				(font
@@ -4221,11 +4221,11 @@
 		(instances
 			(project "katia"
 				(path "/4cc5d416-57f5-4147-8183-e03ae6b1198a/089db7cd-2934-428b-a62a-55e0735649ba/92c7d305-84cf-4400-bd59-4f28ecb1b049"
-					(reference "TP9")
+					(reference "TP11")
 					(unit 1)
 				)
 				(path "/4cc5d416-57f5-4147-8183-e03ae6b1198a/50d96a5e-3d25-4129-9495-15388c76587f/109c87e7-e271-4132-84ce-4a528ef290f8"
-					(reference "TP12")
+					(reference "TP16")
 					(unit 1)
 				)
 			)
@@ -4756,7 +4756,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "af89b067-c21b-4176-993b-b42cf3f82de1")
-		(property "Reference" "TP8"
+		(property "Reference" "TP10"
 			(at 191.77 90.17 0)
 			(effects
 				(font
@@ -4806,11 +4806,11 @@
 		(instances
 			(project "katia"
 				(path "/4cc5d416-57f5-4147-8183-e03ae6b1198a/089db7cd-2934-428b-a62a-55e0735649ba/92c7d305-84cf-4400-bd59-4f28ecb1b049"
-					(reference "TP8")
+					(reference "TP10")
 					(unit 1)
 				)
 				(path "/4cc5d416-57f5-4147-8183-e03ae6b1198a/50d96a5e-3d25-4129-9495-15388c76587f/109c87e7-e271-4132-84ce-4a528ef290f8"
-					(reference "TP11")
+					(reference "TP15")
 					(unit 1)
 				)
 			)
@@ -4973,7 +4973,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "ccc59c63-3400-4dac-ab36-3e9bca79114c")
-		(property "Reference" "TP7"
+		(property "Reference" "TP9"
 			(at 73.66 129.54 0)
 			(effects
 				(font
@@ -5023,11 +5023,11 @@
 		(instances
 			(project "katia"
 				(path "/4cc5d416-57f5-4147-8183-e03ae6b1198a/089db7cd-2934-428b-a62a-55e0735649ba/92c7d305-84cf-4400-bd59-4f28ecb1b049"
-					(reference "TP7")
+					(reference "TP9")
 					(unit 1)
 				)
 				(path "/4cc5d416-57f5-4147-8183-e03ae6b1198a/50d96a5e-3d25-4129-9495-15388c76587f/109c87e7-e271-4132-84ce-4a528ef290f8"
-					(reference "TP10")
+					(reference "TP14")
 					(unit 1)
 				)
 			)

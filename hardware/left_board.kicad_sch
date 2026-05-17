@@ -11155,7 +11155,7 @@
 			(uuid "93557c73-ec98-4308-a0b8-e5cee2306df7")
 		)
 		(instances
-			(project ""
+			(project "katia"
 				(path "/4cc5d416-57f5-4147-8183-e03ae6b1198a/089db7cd-2934-428b-a62a-55e0735649ba"
 					(reference "J3")
 					(unit 1)
