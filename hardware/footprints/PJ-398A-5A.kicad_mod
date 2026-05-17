@@ -223,14 +223,14 @@
 		(uuid "5dc4787c-500b-4b2c-b886-ee32763dab59")
 	)
 	(pad "T" smd rect
-		(at -3.8 11.8)
-		(size 1.2 1.8)
+		(at -3.85 11.35)
+		(size 1.3 2.7)
 		(layers "F.Cu" "F.Mask" "F.Paste")
 		(uuid "31d3af2c-5d9f-4e16-aadb-8a0e8e491268")
 	)
 	(pad "T" smd rect
-		(at 3.8 11.8)
-		(size 1.2 1.8)
+		(at 3.85 11.35)
+		(size 1.3 2.7)
 		(layers "F.Cu" "F.Mask" "F.Paste")
 		(uuid "140423d1-06be-4aad-9b02-dd5f5f88ad38")
 	)
