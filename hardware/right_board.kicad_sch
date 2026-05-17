@@ -10325,7 +10325,7 @@
 				)
 			)
 		)
-		(property "Value" "100R"
+		(property "Value" "0R"
 			(at 200.66 40.64 90)
 			(effects
 				(font
@@ -10359,7 +10359,7 @@
 				)
 			)
 		)
-		(property "JLCPCB Part #" "C105588"
+		(property "JLCPCB Part #" "C713447"
 			(at 200.66 38.1 90)
 			(effects
 				(font
